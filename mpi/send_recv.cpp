@@ -1,5 +1,5 @@
 // Find out rank, size
-#include <mpi.h>
+#include </usr/lib/openmpi/include/mpi.h>
 #include <stdio.h>
 
 int main(int argc, char *argv[]) {
