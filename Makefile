@@ -1,5 +1,5 @@
 CXX		  := g++
-CXX_FLAGS := -Wall -Wextra -std=c++17 -ggdb -fopenmp
+CXX_FLAGS := -Wall -Wextra -std=c++17 -ggdb -fopenmp -pthread
 
 BIN		:= bin
 SRC		:= src
@@ -7,7 +7,7 @@ INCLUDE	:= include
 LIB		:= lib
 
 LIBRARIES	:=
-EXECUTABLE	:= main
+EXECUTABLE	:= openmp
 
 
 all: $(BIN)/$(EXECUTABLE)
