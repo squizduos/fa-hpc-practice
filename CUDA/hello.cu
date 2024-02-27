@@ -1,17 +1,30 @@
+
+#include "cuda_runtime.h"
+#include "device_launch_parameters.h"
 #include <stdio.h>
 
 
-__global__ void mykernel(void) 
+// __device__ - GPU
+// __global__ - GPU 
+// __host__   - CPU
+__global__ void add( int a, int b, int *c)
 {
-printf("Hello World from GPU!\n");
+  *c = a + b;
 }
 
-
-int main(void) 
+int main()
 {
-mykernel<<<1,1>>>();
-cudaDeviceSynchronize;
-printf("Hello World from CPU!\n");
+  int c;
+  int *dev_c;
 
-return 0;
+  cudaMalloc( (void**)&dev_c, sizeof(int));
+
+  add<<<1,1>>> (1, 2, dev_c);
+
+  cudaMemcpy(&c, dev_c, sizeof(int), cudaMemcpyDeviceToHost);
+
+  printf("%i\n", c);
+
+  cudaFree(dev_c);
+  return 0;
 }
