@@ -123,15 +123,15 @@ K значений i таких, что для i-го оператора при�
 ## Работа на семинарах
 
 ### Раздел 1. Архитектура высокопроизводительных систем
-- [Phtreads](pthreads)
-- [c++threads](c++threads)
+- [Phtreads](https://github.com/VladimirAndropov/fa-hpc-practice/pthreads)
+- [c++threads](https://github.com/VladimirAndropov/fa-hpc-practice/c++threads)
 
 ### Раздел 2. Парадигмы параллельного программирования
-- [OpenMP](openmp)
+- [OpenMP](https://github.com/VladimirAndropov/fa-hpc-practice/openmp)
 - [MPI](mpi)
 
 ### Раздел 3. Гибридные архитектуры.
-- [CUDA](CUDA)
+- [CUDA](https://github.com/VladimirAndropov/fa-hpc-practice/CUDA)
 
 _______
 
